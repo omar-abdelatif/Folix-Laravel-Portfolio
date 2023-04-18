@@ -3,7 +3,7 @@
 @section('content')
     <div class="card-body login-card-body">
         <div class="card-image text-center">
-            <img src="{{asset('images/logo.jpg')}}" class="rounded mt-3 mb-3" width="130" alt="">
+            <img src="{{asset('images/favicon.png')}}" class="rounded mt-3 mb-3" width="130" alt="">
         </div>
 
         <form method="POST" action="{{ route('register') }}">
