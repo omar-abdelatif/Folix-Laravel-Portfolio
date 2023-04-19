@@ -19,11 +19,13 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body>
+<body style="background-image: url({{asset('frontend/assets/img/1.jpg')}})">
     <main>
+        <header>
+            @yield('navigation')
+        </header>
         <div class="foliox_tm_all_wrap w-full min-h-[100vh] clear-both float-left relative" data-magic-cursor="show">
             <div class="site-wrapper">
-                @yield('navigation')
                 @yield('content')
             </div>
         </div>

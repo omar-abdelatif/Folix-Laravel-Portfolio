@@ -3,15 +3,14 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('frontend.site');
+//! Site Routes
+Route::middleware('guest')->group(function () {
+    Route::view('/', 'frontend.site');
+    // Route::get();
 });
 
 Auth::routes();
-
-
-
-
+//! Dashboard Routes
 Route::group(['prefix' => 'admin/'], function () {
     Route::middleware('auth')->group(function () {
         // Route::view('login', 'auth.login')->name('login');
